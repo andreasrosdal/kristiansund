@@ -1,10 +1,10 @@
 The Ikea-Startup-Competitor™ system
 ===================================
 
-
 A Java Spring boot application.  
 MySQL database.  
 Compile with Maven.  
+Requires Java 17, because of Spring Boot 3.1.3.
 
 Web usage
 ========= 
