@@ -1,7 +1,12 @@
 package com.ikeastartup.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+/**
+ * The OrderLine model object, stored in the database.
+ */
 @Entity
 @Table(name = "orderline")
 public class OrderLine {
@@ -10,11 +15,21 @@ public class OrderLine {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    int orderId;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonBackReference
+    @JsonIgnore
+    private Orders orders;
+
+    @ManyToOne
+    private Product product;
+
+    // TODO: Should not use double, instead use Float or some more appropriate data type.
     double price;
 
     double discount;
+
+    double finalPrice;
 
     public Long getId() {
         return id;
@@ -24,12 +39,12 @@ public class OrderLine {
         this.id = id;
     }
 
-    public int getOrderId() {
-        return orderId;
+    public Orders getOrder() {
+        return orders;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
+    public void setOrder(Orders orders) {
+        this.orders = orders;
     }
 
     public double getPrice() {
@@ -46,5 +61,32 @@ public class OrderLine {
 
     public void setDiscount(double discount) {
         this.discount = discount;
+    }
+
+
+
+
+    public double getFinalPrice() {
+        return finalPrice;
+    }
+
+    public void setFinalPrice(double finalPrice) {
+        this.finalPrice = finalPrice;
+    }
+
+    public Orders getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Orders orders) {
+        this.orders = orders;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }
