@@ -1,4 +1,4 @@
-The Ikea-Startup-Competitor™ system
+The Web System
 ===================================
 
 A Java Spring boot application.  
