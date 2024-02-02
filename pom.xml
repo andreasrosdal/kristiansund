@@ -9,11 +9,11 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>com.ikea-competitor</groupId>
-	<artifactId>ikea-startup-competitor-project</artifactId>
+	<groupId>com.competitor</groupId>
+	<artifactId>startup-competitor-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Ikea-Startup-Competitor</name>
-	<description>Ikea-Startup-Competitor</description>
+	<name>Startup-Competitor</name>
+	<description>Startup-Competitor</description>
 
 
 	<properties>
