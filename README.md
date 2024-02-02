@@ -1,5 +1,6 @@
 The Web System
 ===================================
+![CI](https://github.com/andreasrosdal/kristiansund/actions/workflows/ci.yml/badge.svg)
 
 A Java Spring boot application.  
 MySQL database.  
