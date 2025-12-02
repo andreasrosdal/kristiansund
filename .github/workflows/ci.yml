@@ -1,4 +1,4 @@
-name: continuous integration
+ name: continuous integration
 
 on:
   - pull_request
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [ 21 ]
+        java: [ 25 ]
     name: Java ${{matrix.java}}    
     steps:
       - name: check out app
@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 21    
+          java-version: 25    
       - name: prepare
         run: |
 
